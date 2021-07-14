@@ -9,11 +9,11 @@
     <style>
 
         h1{
-            font-size: 100;
+            font-size: xx-large;
             color: #0e5f41;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             text-align: center;
-            font-weight: 2000;
+            font-weight: bolder;
         }
 
         h2{
@@ -61,7 +61,7 @@
             padding-left: 10%;
             padding-right: 10%;
             padding-top: 1%;
-            padding-bottom: 1%;
+            padding-bottom: 1%;     
         }
 
         .overviewHeader{
@@ -71,10 +71,12 @@
         }
         
         .personalStatement{
-            font-size: 1235;
+            font-size: large;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-weight: 100;
+            font-weight: 1000;
             text-align: center;
+            padding-left: 20%;
+            padding-right: 20%;
         }
 
         .overviewPoint{
@@ -86,13 +88,17 @@
             height: 35;
         }
 
+        form{
+            text-align: center;
+        }
+
     </style>
 
     <body>
         <div class="topnav">
             <a class="active" href="#mission">Mission</a>
             <a href="#petition">Petition</a>
-            <a href="#contact">Contact</a>
+            <a href="#commentSection">Comments</a>
         </div>
         <div class="allInfo">
             <br>
@@ -136,8 +142,8 @@
             </div>
             <br>
             <div class="infoSegment">
-                <div class="comment">
-                    <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea><br>
+                <div class="comment" id="commentSection">
+                    <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="Post an anonomous message......" style="width: 1447px; height: 83px;"></textarea><br>
                     <input type="submit" value="Post" onclick="insert()" style="width:200px;" /></form>
                     </div>
                     <div id="display"></div>
