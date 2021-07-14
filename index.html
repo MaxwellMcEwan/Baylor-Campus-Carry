@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="pragma" content="no-cache" />
+    <head>
+        <img src="BaylorLogo.png" alt="" height="105" align="left">
+        <h1 id="headline">Baylor Campus Carry</h1>
+    </head>
+
+    <style>
+
+        h1{
+            font-size: 100;
+            color: #0e5f41;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            font-weight: 2000;
+        }
+
+        h2{
+            font-size: 40;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #0e5f41;
+
+        }
+
+        .topnav {
+        background-color: #333;
+        overflow: hidden;
+        }
+
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+        }
+        
+        body{
+            background-color: white;
+        }
+
+        .allInfo{
+            background-color: rgb(68, 68, 68);
+        }
+
+        .infoSegment{
+            background-color: rgb(255, 255, 255);
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+
+        .overviewHeader{
+            font-size: 25;
+            font-weight: 200;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .personalStatement{
+            font-size: 1235;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 100;
+            text-align: center;
+        }
+
+        .overviewPoint{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .submitButton{
+            width: 200;
+            height: 35;
+        }
+
+    </style>
+
+    <body>
+        <div class="topnav">
+            <a class="active" href="#mission">Mission</a>
+            <a href="#petition">Petition</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="allInfo">
+            <br>
+            <div class="infoSegment" id="mission">
+                <p class="personalStatement">I love Baylor, but everyone knows it's not perfect. I believe that Baylor should <b>completely</b> opt in to the campus carry bill.<b> The right to keep and bear arms shall not be infringed.</b> This is what an opt in to the campus carry bill might look like</p>
+                <br>
+                <p class="overviewHeader">Who is Eligible to Carry?</p>
+                <p class="overviewPoint">Individuals who hold a license to carry are eligible to carry a concealed handgun on campus. License holders must be 21 or older and must clear eligibility requirements related to criminal background, mental health history, and substance abuse issues.</p>
+                <br>
+                <p class="overviewHeader">Where is Concealed Carry Allowed</p>
+                <p class="overviewPoint">The concealed carry of handguns by permit holders is generally allowed in outdoor areas, as well as buildings and spaces that are accessible to the public. Permit holders are allowed to carry in classrooms. Faculty members may not impose a ban on concealed handguns in their classrooms.</p>
+                <ul>
+                    <li><p><b>Outdoor areas.</b></p></li>
+                    <li><p><b>Public buildings and spaces.</b></p></li>
+                    <li><p><b>The classroom.</b></p></li>
+                    <li><p><b>***Faculty members may not impose a ban on concealed handguns in their classrooms.***</b></p></li>
+                </ul>
+                <br>
+                <p class="overviewHeader">Where is Concealed Carry Prohibited<p>
+                <p class="overviewPoint">Areas exempted from concealed carry as laid out by state law and campus policy would include:</p>
+                <ul>
+                    <li><p><b>Residence halls:</b> Concealed carry is prohibited in on-campus residence halls, except in common areas, such as lounges and study areas. Student residents’ family members with state-issued permits may carry handguns while visiting.</p></li>
+                    <li><p><b>Intercollegiate athletic events.</b></p></li>
+                    <li><p><b>Spaces where K-12 programming is held.</b></p></li>
+                    <li><p><b>Businesses that derive more than 51 percent of their sales from alcohol.</b></p></li>
+                    <li><p><b>Selected labs:</b> Certain laboratories and animal-research facilities may prohibit the concealed carry of handguns.</p></li>
+                </ul>
+            </div>
+            <br>
+            <div class="infoSegment" id="petition">                                                                                         
+                <h2 align="center">Sign the petition</h2>
+                <form align="center" method="POST">
+                    <label for="fname" class="overviewPoint">First name:</label>
+                    <input type="text" id="fname" name="fname">
+                    <label for="lname" class="overviewPoint" >Last initial:</label>
+                    <input type="text" id="lname" name="lname">
+                    <label for="gyear" class="overviewPoint">Year of Graduation:</label>
+                    <input type="number" id="gyear" name="gyear"> <br><br>
+                    <input type="submit" value="Submit" class="submitButton" onclick="saveSignature();">
+                </form>
+            </div>
+            <br>
+            <div class="infoSegment">
+                <div class="comment">
+                    <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea><br>
+                    <input type="submit" value="Post" onclick="insert()" style="width:200px;" /></form>
+                    </div>
+                    <div id="display"></div>
+
+                    <script type="text/javascript">
+                    var titles = [];
+                    var titleInput = document.getElementById("title");
+                    var messageBox = document.getElementById("display");
+                    function Allow()
+                    {
+                    if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+                    {
+                    user.title.value="";
+                    alert("Please Enter only alphabets");
+                    }
+                    window.location.reload()
+                    }
+                    function insert () {
+                    titles.push(titleInput.value);
+                    clearAndShow();
+                    }
+                    function clearAndShow ()
+                    {
+                    titleInput.value = "";
+                    messageBox.innerHTML = "";
+                    messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+                    }
+                    </script>                    
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function saveSignature() {
+
+            const first = document.getElementById('fname');
+            const lastInitial = document.getElementById('lname');
+            const gradYear = document.getElementById('gyear');
+
+            let signeeData = 
+            '\r Signature: ' + first.value + ' ' + lastInitial.value + '. ' + 
+            'Graduation Year: ' + gradYear.value;
+
+            var textToBLOB = new Blob([signeeData], { type: 'text/plain;charest=utf-8' });
+            saveAs(textToBLOB, "signatureData.txt");
+        }
+    </script>
+</html>
