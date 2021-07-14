@@ -88,8 +88,25 @@
             height: 35;
         }
 
+        textarea{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
         form{
             text-align: center;
+        }
+
+        .commentDisplay{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        label{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: medium;
         }
 
     </style>
@@ -131,11 +148,11 @@
             <div class="infoSegment" id="petition">                                                                                         
                 <h2 align="center">Sign the petition</h2>
                 <form align="center" method="POST">
-                    <label for="fname" class="overviewPoint">First name:</label>
+                    <label for="fname">First name:</label>
                     <input type="text" id="fname" name="fname">
-                    <label for="lname" class="overviewPoint" >Last initial:</label>
+                    <label for="lname">Last initial:</label>
                     <input type="text" id="lname" name="lname">
-                    <label for="gyear" class="overviewPoint">Year of Graduation:</label>
+                    <label for="gyear">Year of Graduation:</label>
                     <input type="number" id="gyear" name="gyear"> <br><br>
                     <input type="submit" value="Submit" class="submitButton" onclick="saveSignature();">
                 </form>
@@ -146,7 +163,7 @@
                     <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="Post an anonomous message......" style="width: 1447px; height: 83px;"></textarea><br>
                     <input type="submit" value="Post" onclick="insert()" style="width:200px;" /></form>
                     </div>
-                    <div id="display"></div>
+                    <div id="display" class="commentDisplay"></div>
 
                     <script type="text/javascript">
                     var titles = [];
